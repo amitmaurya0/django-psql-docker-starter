@@ -11,17 +11,17 @@ services:
   web:
     build: .
     working_dir: /application/server
-    # env_file:
-    #   - server/config/settings/.env
+    env_file:
+      - server/config/settings/.env
     # command: "tail -f /dev/null"
-    command: ["python", "manage.py", "runserver", "0:8000"]
+    command: ["python", "manage.py", "runserver", "0:8111"]
     volumes:
       - .:/application
       - app-python-site-packages:/usr/local/lib/python3.6/site-packages
       - app-usr-local-bin:/usr/local/bin
       - ~/.ssh:/root/.ssh
     ports:
-      - "8000:8000"
+      - "8111:8111"
     depends_on:
       - db
 
