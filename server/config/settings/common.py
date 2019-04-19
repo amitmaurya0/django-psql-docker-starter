@@ -1,4 +1,3 @@
-
 import os
 import environ
 
@@ -23,7 +22,7 @@ ALLOWED_HOSTS = env.bool('DJANGO_ALLOWED_HOSTS', default=['*'])
 
 # Application definition
 CUSTOM_APPS = [
-    'apps.api',
+    'apps.core',
 ]
 
 INSTALLED_APPS = [
